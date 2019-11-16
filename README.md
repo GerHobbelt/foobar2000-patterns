@@ -27,7 +27,7 @@
   
 * `$trim($left(%album artist%,48) $iflonger(%album artist%,48,[~H[$pad($add($mod($crc32(%album artist%),97),1),2,X)]],[]))`
 
-  The 'album artist' first level of organization: I use the *album artist* instead of `%artist%` because the latter *can* differ per track within a single album for collaborations and collection albums ("Classics from the '70s", that sort of thing). Foobar2000 will automatically pick the `%artist%` entry when the `%album arist%` entry in the music track properties is *empty*, so this will never be empty if you have properly filled in the Artist property entry at least.
+  The 'album artist' first level of organization: I use the *album artist* instead of `%artist%` because the latter *can* differ per track within a single album for collaborations and collection albums ("Classics from the '70s", that sort of thing). Foobar2000 will automatically pick the (`%artist%`)[https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference#.25artist.25] entry when the (`%album arist%`)[https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference#.25album_artist.25] entry in the music track properties is *empty*, so this will never be empty if you have properly filled in the Artist property entry at least.
   
   Now about the parts in this one:
   
@@ -37,7 +37,7 @@
   
     > Yes, the 48 was an arbitrary choice: I've got 260 characters for the entire path, which I have to distribute among the base, artist, album, CD and track parts of this path pattern. The titles generally are longer and deemed more important by me, so I have reserved more space for that part, while artist and album only get about 48 space allocated to them. Tweak the numbers if you want a different 'distribution'.
     
-  + `  $iflonger(%album artist%,48,  {HASHID}  ,[]))` - see [the $iflonger documentation](): here I create a 'unique hash string' *only when the Album Artist text happens to be clipped by the preceding `$left(...)` operation*.
+  + `  $iflonger(%album artist%,48,  {HASHID}  ,[]))` - see [the $iflonger documentation](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference#.24iflonger.28str.2Cn.2Cthen.2Celse.29): here I create a 'unique hash string' *only when the Album Artist text happens to be clipped by the preceding `$left(...)` operation*.
   
   + `    [~H[$pad($add($mod($crc32(%album artist%),97),1),2,X)]]` - create a 'unique hash string' for the given Album Artist. whoa, Nelly! What is this?!
   
