@@ -1,4 +1,4 @@
-# foobar2000 patterns
+# [foobar2000](https://www.foobar2000.org/) patterns
 
 ## File Management: File Move/Copy
 
