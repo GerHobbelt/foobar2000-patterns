@@ -27,7 +27,7 @@
   
 * `$trim($left(%album artist%,48) $iflonger(%album artist%,48,[~H[$pad($add($mod($crc32(%album artist%),97),1),2,X)]],[]))`
 
-  The 'album artist' first level of organization: I use the *album artist* instead of `%artist%` because the latter *can* differ per track within a single album for collaborations and collection albums ("Classics from the '70s", that sort of thing). Foobar2000 will automatically pick the (`%artist%`)[https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference#.25artist.25] entry when the (`%album arist%`)[https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference#.25album_artist.25] entry in the music track properties is *empty*, so this will never be empty if you have properly filled in the Artist property entry at least.
+  The 'album artist' first level of organization: I use the *album artist* instead of `%artist%` because the latter *can* differ per track within a single album for collaborations and collection albums ("Classics from the '70s", that sort of thing). Foobar2000 will automatically pick the [`%artist%`](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference#.25artist.25) entry when the [`%album arist%`](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference#.25album_artist.25) entry in the music track properties is *empty*, so this will never be empty if you have properly filled in the Artist property entry at least.
   
   Now about the parts in this one:
   
