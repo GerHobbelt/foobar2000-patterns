@@ -1,4 +1,4 @@
-# [foobar2000](https://www.foobar2000.org/) patterns
+# [foobar2000](https://www.foobar2000.org/) file / path naming [patterns](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Title_Formatting_Reference)
 
 ## File Management: File Move/Copy
 
