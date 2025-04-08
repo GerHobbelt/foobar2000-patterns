@@ -130,6 +130,19 @@
     )
     ``` 
 
-  
+ ## New macros as per 2025AD
+
+ ### Copy / move macros
+
+ - favortites: destination path + `$if([%disc number%],$num(%disc number%,2):,)$if([%track number%],$num(%track number%,3),999$num(%list_index%,5)) - $shortest(%artist%,$left(%artist%,60)⋯) :: $shortest(%title%,$left(%title%,80)⋯)[ :: $shortest([%album%],$left([%album%],40)⋯)]##$num(%list_index%,5)`
+ - AAS100: album-artist-title-clipped-to-below-260-chars: destination path + `$if([%disc number%],$num(%disc number%,2):,)$if([%track number%],$num(%track number%,3),999$num(%list_index%,5)) - $shortest(%artist%,$left(%artist%,60)⋯) :: $shortest(%title%,$left(%title%,80)⋯)[ :: $shortest([%album%],$left([%album%],40)⋯)]##$num(%list_index%,5)`
+ - AAS100-2: same as above, but creates yet another subdirectory tree: phase 2 of the dir tree cleanup process: destination_path + `$if([%disc number%],$num(%disc number%,2):,)$if([%track number%],$num(%track number%,3),999$num(%list_index%,5)) - $shortest(%artist%,$left(%artist%,60)⋯) :: $shortest(%title%,$left(%title%,80)⋯)[ :: $shortest([%album%],$left([%album%],40)⋯)]##$num(%list_index%,5)`
+
+### Rename macros
+
+- "#D:#T-artist-track-clipped": `$if([%disc number%],$num(%disc number%,2):,)$if([%track number%],$num(%track number%,3),999$num(%list_index%,5)) - $shortest(%artist%,$left(%artist%,60)⋯) - $shortest(%title%,$left(%title%,100)⋯)##$num(%list_index%,5)`
+- "favorites": `[$left(%date_added_to_pref_collection%,19) ~ ]$if([%album artist%],$shortest(%album artist%,$left(%album artist%,40)⋯),$shortest(%artist%,$left(%artist%,40)⋯)) :: [$shortest([%album%],$left([%album%],40)⋯) :: ]$if([%disc number%],$num(%disc number%,2):,)$if([%track number%],$num(%track number%,3),999$num(%list_index%,5)) - $shortest(%title%,$left(%title%,70)⋯)##$num(%list_index%,5)`
+
+
 
 
